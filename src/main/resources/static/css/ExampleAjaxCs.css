@@ -1,0 +1,6 @@
+.test-box > *{
+  color: red;
+}
+.test-box > *:focus{
+
+}
