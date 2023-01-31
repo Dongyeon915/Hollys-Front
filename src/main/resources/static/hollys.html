@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="./javascript/hollys/productApi.js"></script>
+  <title>HollysManager</title>
+
+</head>
+<body>
+  <div>
+    <h3>상품조회 페이지</h3>
+    <div>
+      <input id="getAllProduct-btn" type="button" value="모든상품조회"/>
+    </div>
+    <div>
+      <input type="number" name="product-id-input" id="product-id"/>
+      <input type="button" value="id로 상품조회" id="getProductId-btn"/>
+    </div>
+    <div>
+      <input type="text" name="product-name-input" id="product-name"/>
+      <input type="button" value="name 상품조회" id="getProductName-btn"/>
+    </div>
+  </div>
+
+  <div>
+    <h3>상품 추가 페이지</h3>
+    <input type="text" name="product-name-input" id="add-name" value="커핑"/>
+    <input type="text" name="product-name-input" id="add-name-eng" value="abc"/>
+    <input type="text" name="product-name-input" id="add-info" value="인력소 맥심"/>
+    <input type="number" name="product-name-input" id="add-price" value=100 />
+    <input type="text" name="product-name-input" id="add-image-url" value="www.comco" />
+    <input type="number" name="product-name-input" id="add-category-fk" value=1 />
+    <input type="button" value="상품입력" id="setProduct-btn"/>
+  </div>
+
+  <div>
+    <h3>상품 업데이트 페이지</h3>
+    <input type="text" name="product-name-input" id="update-name" value="커핑"/>
+    <input type="text" name="product-name-input" id="update-name-eng" value="abc"/>
+    <input type="text" name="product-name-input" id="update-info" value="인력소 맥심"/>
+    <input type="number" name="product-name-input" id="update-price" value=100 />
+    <input type="text" name="product-name-input" id="update-image-url" value="www.comco" />
+    <input type="number" name="product-name-input" id="update-category-fk" value=1 />
+    <input type="button" value="상품입력" id="updateProduct-btn"/>
+  </div>
+
+  <div>
+    <h3>상품삭제 페이지</h3>
+    <div>
+      <input type="number" name="product-id-input" id="delete-product-id"/>
+      <input type="button" value="id로 상품 삭제" id="deleteProductId-btn"/>
+    </div>
+  </div>
+</body>
+</html>

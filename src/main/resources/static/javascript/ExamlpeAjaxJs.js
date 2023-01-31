@@ -1,11 +1,45 @@
+const host = "http://localhost:3000"
+
+const deleteTest = (id) => {
+  $.ajax(`${host}/tests/${id}`, {
+    method: "DELETE"
+  }).done((data, textStatus, jqXHR) => {
+    console.log(data)
+  }).fail((jqXHR, textStatus) => {
+    console.log(jqXHR.statusText)
+    console.log("Code: ", jqXHR.status)
+    console.log("Text: ", jqXHR.responseText)
+    console.log(textStatus)
+  }).always(()=> {
+    console.log("Log 록기")
+  });
+}
+
+const putTest = (jsonData) => {
+  $.ajax(`${host}/tests`, {
+    dataType: "json",
+    method: "PUT",
+    contentType: "application/json",
+    data: SON.stringify(jsonData)
+  }).done((data, textStatus, jqXHR) => {
+    console.log(data)
+  }).fail((data, extStatus, jqXHR) => {
+    console.log(jqXHR)
+  })
+}
+
+
+
 // DOMContentLoaded은 defer없이 화면이 그려진뒤 해당 이벤트 실행
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log($)
   const idEL = document.querySelector("#id-input");
-  const url = "";
   document.querySelector("#all-id").addEventListener("click", () => {
-    console.log("찍힌다.")
-    setTest()
+    deleteTest(5)
+
+    // setTest({
+    //   test_value: testNameEL.value
+    // });
     // setCategory()
     // getAllCategory()
     // getCategoryByID(idEL.value);
@@ -77,51 +111,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   // 내용의값이 들어가지않음
   // 할리스 테스트 controller사용
-  function setTest() {
-    $.ajax("http://172.30.1.14:3000/tests/settest", {
-      contentType: JSON,
-      method: "POST",
-      contentType: "application/json",
-      data: JSON.stringify({
-        test_value: testNameEL,
-        id: 15
-      })
-    }).done((data, textStatus, jqXHR) => {
-      console.log(data)
-    })
-  }
+
 
   // 모든 테스트를 가져오는 함수
-  function getTest(){
-        $.ajax("http://172.30.1.14:3000/tests/alltest",{
-          contentType : "application/json",
-        }).done((data,textStatus, jqXHR) => {
-          console.log(data)
-        })
-  }
+
 
   // 내용이 들어간 text박스를 수정
-  var testIdEL = document.querySelector(`#test-id-input`);
-  var testNameEL = document.querySelector(`#test-name-input`);
-  testNameEL = "한글";
+  var testNameEL = document.querySelector("#test-name");
   document.querySelector(`#test-input-btn`).addEventListener("click", () => {
     console.log("찍히나")
-    // setTest()
+    console.log(testNameEL.value)
+    setTest({
+      test_value: testNameEL.value
+    })
   })
 
-  function puttest() {
-    $.ajax("http://172.30.1.14:3000/tests/put", {
-      dataType: "json",
-      method: "PUT",
-      contentType: "application/json",
-      data: JSON.stringify({
-        test_value: "test",
-        id: 10
-      })
-    }).done((data, textStatus, jqXHR) => {
-      console.log(data)
-    }).fail((data, textStatus, jqXHR) => {
-      console.log(jqXHR)
-    })
-  }
 });
