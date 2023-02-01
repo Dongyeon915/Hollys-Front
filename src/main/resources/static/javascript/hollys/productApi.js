@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category_fk: updateProductCategoryFk.value
     }
     console.log(productInfo)
-    UpdateProductApi(productInfo)
+    updateProductApi(productInfo)
   })
 
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const deleteBtnEl = document.querySelector("#deleteProductId-btn")
 
   deleteBtnEl.addEventListener("click", () => {
-    DeleteProduct(deleteIdEL.value);
+    deleteProduct(deleteIdEL.value);
 
   })
 
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  function UpdateProductApi(productInfo) {
+  function updateProductApi(productInfo) {
     $.ajax(`http://localhost:3000/products`, {
       contentType: "application/json",
       data: JSON.stringify(productInfo),
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  function DeleteProduct(id){
+  function deleteProduct(id){
     $.ajax(`http://localhost:3000/products/${id}`,{
       contentType: "application/json",
       method: "DELETE",

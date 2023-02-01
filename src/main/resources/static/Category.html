@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <script src="./javascript/hollys/CategoryApi.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <title>Category</title>
+</head>
+<body>
+  <h3>카테고리 조회 페이지</h3>
+  <div>
+    <input type="button" value="모든category" id="getAllCategory-btn"/>
+  </div>
+  <div>
+    <h3>카테고리의 id로 조회</h3>
+    <input type="number" name="category-id-input" id="getCategoryId-input"/>
+    <input type="button" value="ID조회버튼" id="getCategoryId-btn">
+  </div>
+  <div>
+    <h3>카테고리의 menuFk 조회</h3>
+    <input type="number" name="category-menuFk-input" id="getCategory-menuFk-input"/>
+    <input type="button" value="menuFk조회버튼" id="getCategory-menuFk-btn">
+  </div>
+  <div>
+    <h3>카테고리의 type 조회</h3>
+    <input type="text" name="category-type-input" id="getCategory-type-input"/>
+    <input type="button" value="type조회버튼" id="getCategory-type-btn">
+  </div>
+  <div>
+    <h3>카테고리를 등록</h3>
+    <input type="number" name="add-categoryId-input" id="addCategoryId-input" value="1"/>
+    <input type="number" name="add-category-menuFk-input" id="addMenuFk-input" value="1"/>
+    <input type="text" name="add-category-type-input" id="addCategoryType-input" value="type"/>
+    <input type="button" value="카테고리등록버튼" id="add-category-input-btn">
+  </div>
+  <div>
+    <h3>카테고리를 수정</h3>
+    <input type="number" name="update-categoryId-input" id="updateCategoryId-input"/>
+    <input type="number" name="update-menuFk-input" id="updateCategory-menuFk-input"/>
+    <input type="text" name="update-Type-input" id="updateCategory-type-input" value="updateType"/>
+    <input type="button" value="카테고리수정버튼" id="update-category-input-btn">
+  </div>
+  <div>
+    <h3>카테고리의 id로 삭제</h3>
+    <input type="number" name="delete-category-id-input" id="delete-categoryId-input"/>
+    <input type="button" value="ID삭제버튼" id="delete-categoryId-btn">
+  </div>
+</body>
+</html>

@@ -127,10 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // console.log(deleteMenuIdInput);
 // console.log(dleteMenuIdBtn);
   dleteMenuIdBtn.addEventListener("click", () => {
-    deleteMenuById(deleteMenuIdInput.value);
+    deleteMenu(deleteMenuIdInput.value);
   })
 
-  function deleteMenuById(id) {
+  function deleteMenu(id) {
     $.ajax(`http://localhost:3000/menus/${id}`, {
       method: "DELETE",
       contentType: "application/json",
