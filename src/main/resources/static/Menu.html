@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <script src="./javascript/hollys/MenuApi.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <title>Menu</title>
+</head>
+<body>
+  <h3>메뉴 조회 페이지</h3>
+  <div>
+    <input type="button" value="모든menu" id="getAllMenu-btn"/>
+  </div>
+  <div>
+    <h3>메뉴의 id로 조회</h3>
+    <input type="number" name="menu-id-input" id="getMenuId-input"/>
+    <input type="button" value="ID조회버튼" id="getMenuId-btn">
+  </div>
+  <div>
+    <h3>메뉴의 name 조회</h3>
+    <input type="text" name="menu.name-input" id="getMenuName-input"/>
+    <input type="button" value="Name조회버튼" id="getMenuName-btn">
+  </div>
+  <div>
+    <h3>메뉴를 등록</h3>
+    <input type="text" name="add-menu-id-input" id="addMenuId-input" value="id"/>
+    <input type="text" name="add-menu-name-input" id="addMenuName-input" value="name"/>
+    <input type="button" value="메뉴등록버튼" id="add-menu-input-btn">
+  </div>
+  <div>
+    <h3>메뉴를 수정</h3>
+    <input type="text" name="update-menu-id-input" id="updateMenuId-input" value="updateId"/>
+    <input type="text" name="update-menu-name-input" id="updateMenuName-input" value="updateName"/>
+    <input type="button" value="메뉴수정버튼" id="update-menu-input-btn">
+  </div>
+  <div>
+    <h3>메뉴의 id로 삭제</h3>
+    <input type="number" name="delete-menu-id-input" id="delete-Menu-Id-input"/>
+    <input type="button" value="ID삭제버튼" id="delete-Menu-Id-btn">
+  </div>
+</body>
+</html>
